@@ -20,3 +20,10 @@ def home(request):
         request,
         "home.html",
     )
+
+
+def conntact(request):
+    return render(
+        request,
+        "conntact.html",
+    )
