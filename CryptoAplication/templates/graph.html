@@ -1,16 +1,15 @@
 {% extends "main_form.html" %}
 {% load static %}
+{% load plotly_dash %}
 {% block title %}
     Graph
 {% endblock title %}
 {% block page %}
-    <h1>Here will be graph</h1>
-    {% load plotly_dash %}
-    <h1>Home Page</h1>
-    <div class="{% plotly_class name='SimpleExample' %} card"
+    <div class="{% plotly_class name='data_price' %} card"
          style="height: 100%; width: 100%">
-        {% plotly_app name='SimpleExample' ratio=0.45 %}
+        {% plotly_app name='data_price' ratio=0.45 %}
     </div>
     <br>
     {{ plot1 | safe }}
+    {% comment %} {{ plot2 | safe }} {% endcomment %}
 {% endblock page %}
