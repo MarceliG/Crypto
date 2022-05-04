@@ -1,0 +1,12 @@
+{% extends "main_form.html" %}
+{% load static %}
+{% load plotly_dash %}
+{% block title %}
+    Graph
+{% endblock title %}
+{% block page %}
+    <div class="{% plotly_class name='data_price' %} card"
+         style="height: 100%; width: 100%">
+        {% plotly_app name='data_price' ratio=0.45 %}
+    </div>
+{% endblock page %}
